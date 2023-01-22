@@ -30,10 +30,10 @@ class MyTestCase(unittest.TestCase):
         """
         try:
             with pytest.raises(OverflowError):
-                self.assertEqual(self.my_car.get_fuel(), 100)
-                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+                self.assertEqual(self.my_car.get_fuel(), 50)
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
-            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
     def test_get_fuel_consumer(self):
         """
@@ -43,9 +43,9 @@ class MyTestCase(unittest.TestCase):
         try:
             with pytest.raises(OverflowError):
                 self.assertEqual(self.my_car.get_fuel_consumer(), os.getenv("fuel_consumer"))
-                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
-            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
     def test_get_fuel_after_driving(self):
         """
@@ -56,9 +56,9 @@ class MyTestCase(unittest.TestCase):
             with pytest.raises(OverflowError):
                 self.my_car.go(100, 2)
                 self.assertEqual(self.my_car.get_fuel(), 49.9)
-                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
-            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
     def test_fuel_after_add_fuel(self):
         """
@@ -69,9 +69,9 @@ class MyTestCase(unittest.TestCase):
             with pytest.raises(OverflowError):
                 self.my_car.add_fuel(500)
                 self.assertEqual(self.my_car.get_fuel(), 0)
-                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
-            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
     def test_budget_after_add_fuel(self):
         """
@@ -82,9 +82,9 @@ class MyTestCase(unittest.TestCase):
             with pytest.raises(OverflowError):
                 self.my_car.add_fuel(500)
                 self.assertEqual(self.my_car.budget, 0)
-                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
-            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
 
 

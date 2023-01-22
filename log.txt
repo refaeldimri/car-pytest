@@ -26,3 +26,17 @@ test_go_with_max_velocity is FAILED, 22/01/2023 20:06:22
 test_add_fuel is PASS, 22/01/2023 20:08:39
 test_go_with_driving_without_resource is PASS, 22/01/2023 20:11:33
 test_go_with_driving_without_resource is FAILED, 22/01/2023 20:11:48
+test_get_fuel is FAILED, 22/01/2023 20:37:31
+test_get_fuel is PASS, 22/01/2023 20:37:42
+test_get_fuel is PASS, 22/01/2023 20:40:04
+test_get_fuel is PASS, 22/01/2023 20:40:39
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 20:42:17
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 20:59:46
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:00:34
+test_get_fuel is PASS, 22/01/2023 21:00:49
+test_get_fuel is PASS, 22/01/2023 21:01:59
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:02:33
+test_get_fuel_consumer Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:03:16
+test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:04:59
+test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:05:11
+test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:06:16
