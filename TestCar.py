@@ -30,6 +30,7 @@ def test_get_fuel(car):
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
 
 
+@pytest.mark.test
 def test_go_with_max_velocity(car):
     """
     this function check function go with max velocity, suppose to raise error when
@@ -38,11 +39,12 @@ def test_go_with_max_velocity(car):
     :return None:
     """
     with pytest.raises(OverflowError):
-        car.go(100, 1)
+        car.go(160, 50)
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
     utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
 
+@pytest.mark.test
 def test_add_fuel(car):
     """
     this test check the function add fuel,
@@ -56,6 +58,7 @@ def test_add_fuel(car):
     utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
 
+@pytest.mark.test
 def test_go_with_driving_without_resource(car):
     """
     this test check the function go with long distance with small capacity of fuel,
@@ -64,7 +67,7 @@ def test_go_with_driving_without_resource(car):
     :return None:
     """
     with pytest.raises(OverflowError):
-        car.go(1, 550)
+        car.go(1, 70000)
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
     utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 

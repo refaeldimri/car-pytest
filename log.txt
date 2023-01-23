@@ -44,3 +44,34 @@ test_budget_after_add_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/
 test_stop Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:41:47
 test_stop Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:41:55
 test_stop is PASS, 23/01/2023 09:42:27
+test_budget_after_add_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:08
+test_fuel_after_add_fuel is PASS, 23/01/2023 09:55:08
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:08
+test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:08
+test_get_fuel_consumer Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:08
+test_stop is PASS, 23/01/2023 09:55:08
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:38
+test_get_fuel_consumer Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:55:50
+test_get_fuel_consumer is PASS, 23/01/2023 09:56:22
+test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:56:28
+test_get_fuel_after_driving is PASS, 23/01/2023 09:56:33
+test_fuel_after_add_fuel is PASS, 23/01/2023 09:56:40
+test_budget_after_add_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:56:49
+test_budget_after_add_fuel is PASS, 23/01/2023 09:57:04
+test_stop is PASS, 23/01/2023 09:57:09
+test_get_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:57:38
+test_go_with_max_velocity Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:57:44
+test_go_with_max_velocity Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:58:02
+test_go_with_max_velocity is PASS, 23/01/2023 09:58:16
+test_add_fuel is PASS, 23/01/2023 09:58:24
+test_go_with_driving_without_resource Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:58:30
+test_go_with_driving_without_resource Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:58:47
+test_go_with_driving_without_resource is PASS, 23/01/2023 09:58:52
+test_get_fuel is PASS, 23/01/2023 10:13:30
+test_get_fuel_consumer is PASS, 23/01/2023 10:14:41
+test_budget_after_add_fuel is PASS, 23/01/2023 10:22:10
+test_fuel_after_add_fuel is PASS, 23/01/2023 10:22:10
+test_get_fuel_after_driving is PASS, 23/01/2023 10:22:27
+test_get_fuel_consumer is PASS, 23/01/2023 10:24:57
+test_go_with_max_velocity is PASS, 23/01/2023 10:26:12
+test_add_fuel is PASS, 23/01/2023 10:26:28

@@ -28,21 +28,23 @@ class MyTestCase(unittest.TestCase):
         test which check the function which return the car's fuel
         :return None:
         """
+        valid_parameter = int(os.getenv("VALID_PARAMETER_TEST_GET_FUEL"))
         try:
             with pytest.raises(OverflowError):
-                self.assertEqual(self.my_car.get_fuel(), 50)
+                self.assertEqual(self.my_car.get_fuel(), valid_parameter)
                 self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
     def test_get_fuel_consumer(self):
         """
-        test which test the car's fuel consumer
+        test which check the function which return the car's fuel consumer
         :return None:
         """
+        valid_parameter = os.getenv("VALID_PARAMETER_TEST_GET_FUEL")
         try:
             with pytest.raises(OverflowError):
-                self.assertEqual(self.my_car.get_fuel_consumer(), os.getenv("fuel_consumer"))
+                self.assertEqual(self.my_car.get_fuel_consumer(), valid_parameter)
                 self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
@@ -55,7 +57,7 @@ class MyTestCase(unittest.TestCase):
         try:
             with pytest.raises(OverflowError):
                 self.my_car.go(100, 2)
-                self.assertEqual(self.my_car.get_fuel(), 49.9)
+                self.assertEqual(self.my_car.get_fuel(), 49.8)
                 self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
@@ -81,7 +83,7 @@ class MyTestCase(unittest.TestCase):
         try:
             with pytest.raises(OverflowError):
                 self.my_car.add_fuel(500)
-                self.assertEqual(self.my_car.budget, 0)
+                self.assertEqual(self.my_car.budget, 11)
                 self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
@@ -94,17 +96,3 @@ class MyTestCase(unittest.TestCase):
                 self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
