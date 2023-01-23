@@ -32,10 +32,10 @@ class Car:
         :return None:
         """
         if self.budget < price:
-            raise OverflowError("You do not have Budget")
+            raise OverflowError(os.getenv("NO_BUDGET"))
         else:
             if price / self.fuel_price + self.fuel > self.full_fuel:
-                raise OverflowError(os.getenv("NO_BUDGET"))
+                raise OverflowError(os.getenv("OVERFLOW_FUEL"))
             else:
                 self.fuel = self.fuel + (price // self.fuel_price)
                 self.budget -= price
@@ -91,6 +91,15 @@ class Car:
         self.fuel -= int(distance) / int(km)
         float('%.2f' % self.fuel)
         self.status = False
+
+    def stop_car(self):
+        """
+        this function stop the car
+        :return None:
+        """
+        if self.status:
+            self.status = False
+
 
 
 

@@ -40,3 +40,7 @@ test_get_fuel_consumer Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023
 test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:04:59
 test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:05:11
 test_get_fuel_after_driving Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:06:16
+test_budget_after_add_fuel Failed: DID NOT RAISE <class 'OverflowError'>, 22/01/2023 21:13:25
+test_stop Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:41:47
+test_stop Failed: DID NOT RAISE <class 'OverflowError'>, 23/01/2023 09:41:55
+test_stop is PASS, 23/01/2023 09:42:27

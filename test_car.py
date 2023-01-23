@@ -86,6 +86,16 @@ class MyTestCase(unittest.TestCase):
         except AssertionError:
             self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
+    def test_stop(self):
+        try:
+            with pytest.raises(OverflowError):
+                self.my_car.stop_car()
+                self.assertEqual(self.my_car.status, True)
+                self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
+        except AssertionError:
+            self.utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
+
+
 
 
 
