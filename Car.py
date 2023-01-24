@@ -72,7 +72,7 @@ class Car:
         """
         This function get velocity and distance for driving,
         finally it calculate the fuel and the budget
-        this functio raise error if one of the following condition:
+        this function raise error if one of the following condition:
         1. velocity param > velocity_max
         2. the fuel dor this driving need more fuel than car's fuel
         :param velocity:

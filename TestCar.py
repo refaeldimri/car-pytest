@@ -24,7 +24,7 @@ def test_get_fuel(car):
     :return None:
     """
     try:
-        assert car.get_fuel() == 20
+        assert car.get_fuel() == float(os.getenv("FUEL_VALID_PARAMETER_TEST_GET_FUEL_AFTER_DRIVING"))
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
     except AssertionError:
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
@@ -39,7 +39,8 @@ def test_go_with_max_velocity(car):
     :return None:
     """
     with pytest.raises(OverflowError):
-        car.go(160, 50)
+        car.go(int(os.getenv("VELOCITY_VALID_PARAMETER_TEST_GET_FUEL_AFTER_DRIVING")),
+               int(os.getenv("DISTANCE_VALID_PARAMETER_TEST_GET_FUEL_AFTER_DRIVING")))
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
     utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
@@ -53,7 +54,7 @@ def test_add_fuel(car):
     :return None:
     """
     with pytest.raises(OverflowError):
-        car.add_fuel(600)
+        car.add_fuel(600 + int(os.getenv("BUDGET")))
         utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_FAILED"))
     utilities.writeToFile(str(inspect.currentframe().f_code.co_name) + " " + os.getenv("TEST_PASS"))
 
